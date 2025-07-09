@@ -1,21 +1,25 @@
 # Unity BRP Screen Space Global Illumination (SSGI)
 
+<p align="center">
+  <img src="Screenshots/ssgi_preview.gif" alt="SSGI Preview" width="1000"/>
+</p>
+
 This is a **simple and lightweight implementation** of **Screen Space Global Illumination** (SSGI) for Unity's Built-in Render Pipeline (BRP). It features a fully ray-marching approach and provides both global illumination and ambient occlusion support with minimal setup and no external dependencies.
 
 ---
 
-## ✨ Features
+## Features
 
-- ✅ Screen Space Global Illumination (GI)
-- ✅ Screen Space Ambient Occlusion (AO)
-- ✅ Combined GI + AO mode
-- ✅ Simple Gaussian blur for final smoothing
-- ✅ No compute shaders – pure full-screen passes
-- ✅ Easy to integrate into any BRP project
+- Screen Space Global Illumination (GI)
+- Screen Space Ambient Occlusion (AO)
+- Combined GI + AO mode
+- Simple Gaussian blur for final smoothing
+- No compute shaders – pure full-screen passes
+- Easy to integrate into any BRP project
 
 ---
 
-## 🛠️ How to Use
+## How to Use
 
 1. **Add the script:**
    - Attach `SSGI.cs` to your main **Camera**.
@@ -30,8 +34,16 @@ That’s it! You're ready to see dynamic screen-space GI in your scene.
 
 ---
 
-## 📓 Notes
+## Notes
 
+- **Not Compatible with Unity's Post Processing Stack**  
+  Since this system is applied directly to the camera, it cannot render *between* Unity’s built-in post-processing stack passes.  
+  This limits integration with custom effects like bloom, color grading, etc.
+
+- **Suboptimal Denoising and Performance**  
+  The current denoiser is simplistic. Without temporal reprojection, the results may appear noisy, especially at low sample counts.  
+  Overall performance and visual quality still need improvement.
+  
 - **Temporal Reprojection Removed:**  
   Temporal reprojection was removed due to visible ghosting and instability issues. Will be re-evaluated in future versions.
 
@@ -40,7 +52,7 @@ That’s it! You're ready to see dynamic screen-space GI in your scene.
 
 ---
 
-## 🧠 Shader Overview
+## Shader Overview
 
 This project includes a single-pass ray-marching shader that:
 
@@ -53,7 +65,7 @@ This project includes a single-pass ray-marching shader that:
 
 ---
 
-## 🧪 Tested On
+## Tested On
 
 - Unity 2021.3 and Unity 6
 - Built-in Render Pipeline (BRP)
@@ -61,6 +73,6 @@ This project includes a single-pass ray-marching shader that:
 
 ---
 
-## 💬 License
+## License
 
 Free to use and modify!
