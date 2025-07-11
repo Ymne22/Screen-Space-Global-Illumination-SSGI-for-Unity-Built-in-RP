@@ -71,8 +71,14 @@ This project includes a single-pass ray-marching shader that:
 - Built-in Render Pipeline (BRP)
 - Deferred rendering paths only
 
+> ⚠️ Not compatible with URP or HDRP.
+
 ---
 
 ## License
 
-Free to use and modify!
+**MIT License**  
+Free to use, modify, and distribute.  
+Attribution is appreciated but not required.
+
+---
