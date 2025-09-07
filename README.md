@@ -1,5 +1,8 @@
 # Unity BRP Screen Space Global Illumination (SSGI)
 
+⚠️ This version has been deprecated. Please use this version for the latest update: [Ymne LightingFX](https://github.com/Ymne22/YmneLightingFX-for-Unity-BRP/tree/main)
+
+
 <p align="center">
   <img src="Screenshots/ssgi_preview.gif" alt="SSGI Preview" width="1000"/>
 </p>
